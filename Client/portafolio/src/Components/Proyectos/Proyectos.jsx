@@ -14,7 +14,7 @@ const Proyectos = () => {
         
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/allData');
+                const response = await axios.get('https://portafolio-production-2b14.up.railway.app/allData');
                 setData(response.data);
             } catch (error) {
                 console.error(error);

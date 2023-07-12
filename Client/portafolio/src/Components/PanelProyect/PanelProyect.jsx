@@ -20,7 +20,7 @@ const ProyectosForm = () => {
                     const user = JSON.parse(userLoginLocalStorage)
                     setUser(user)
                 } 
-                const response = await axios.get('http://localhost:8000/allData');
+                const response = await axios.get('https://portafolio-production-2b14.up.railway.app/allData');
                 setData(response.data);
             } catch (error) {
                 console.error(error);
@@ -43,7 +43,7 @@ const ProyectosForm = () => {
                 },
             };
             axios
-                .delete(`http://localhost:8000/delete/${id}`,config)
+                .delete(`https://portafolio-production-2b14.up.railway.app/delete/${id}`,config)
                 .then();
            
             const updatedData = data.filter((item) => item.id !== id);
@@ -81,7 +81,7 @@ const ProyectosForm = () => {
                 Authorization: `Bearer ${token}`,
             },
         };
-        await axios.post('http://localhost:8000/data', Nuevoproyecto,config);
+        await axios.post('https://portafolio-production-2b14.up.railway.app/data', Nuevoproyecto,config);
       
         setProyectoData({
             name: "",

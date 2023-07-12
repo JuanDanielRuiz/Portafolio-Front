@@ -30,7 +30,7 @@ const LoginForm = () => {
         
         
         try {
-            const response = await axios.post('http://localhost:8000/formLogin', login);
+            const response = await axios.post('https://portafolio-production-2b14.up.railway.app/formLogin', login);
 
             console.log(response.data.result)
             // Si la respuesta es exitosa, establecer el estado loggedIn en true para redirigir
